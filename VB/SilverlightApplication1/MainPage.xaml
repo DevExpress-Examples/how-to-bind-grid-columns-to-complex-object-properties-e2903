@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:local="clr-namespace:SilverlightApplication1">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Command="{Binding ChangedSelectedRowCommand}">Change Selected Row</Button>
+        <dxg:GridControl local:GridBindingHelper.ItemsSource="{Binding Rows}" SelectedItem="{Binding Path=SelectedRow, Mode=TwoWay}" Grid.Row="1">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="Properties[0].Value" UnboundType="String" Header="Text (Properties[0].Value)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="Properties[1].Value" UnboundType="Integer" Header="Number (Properties[1].Value)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="Properties[2].Value" UnboundType="Boolean" Header="Bool (Properties[2].Value)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="Dictionary[Text].Value" UnboundType="String" Header="Text (Dictionary[Text].Value)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="Dictionary[Number].Value" UnboundType="Integer" Header="Number (Dictionary[Number].Value)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="Dictionary[Bool].Value" UnboundType="Boolean" Header="Bool (Dictionary[Bool].Value)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="DynamicObject.Text" UnboundType="String" Header="Text (DynamicObject)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="DynamicObject.Number" UnboundType="Integer" Header="Number (DynamicObject)" />
+                <dxg:GridColumn local:GridBindingHelper.ComplexFieldName="DynamicObject.Bool" UnboundType="Boolean" Header="Bool (DynamicObject)" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView AutoWidth="True" />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+    </Grid>
+</UserControl>
