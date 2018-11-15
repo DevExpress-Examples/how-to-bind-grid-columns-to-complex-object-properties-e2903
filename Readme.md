@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DinamicDictionary.cs](./CS/SilverlightApplication1/DinamicDictionary.cs) (VB: [DinamicDictionary.vb](./VB/SilverlightApplication1/DinamicDictionary.vb))
+* [GridColumnBindingHelper.cs](./CS/SilverlightApplication1/GridColumnBindingHelper.cs) (VB: [GridColumnBindingHelper.vb](./VB/SilverlightApplication1/GridColumnBindingHelper.vb))
+* [MainPage.xaml](./CS/SilverlightApplication1/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/SilverlightApplication1/MainPage.xaml.vb))
+* [MainPage.xaml.cs](./CS/SilverlightApplication1/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/SilverlightApplication1/MainPage.xaml.vb))
+* [ViewModel.cs](./CS/SilverlightApplication1/ViewModel.cs) (VB: [ViewModel.vb](./VB/SilverlightApplication1/ViewModel.vb))
+<!-- default file list end -->
 # How to bind grid columns to complex object properties
 
 
